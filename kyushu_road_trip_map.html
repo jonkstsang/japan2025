@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_9d3d76d8a5ee1b2dcac7cb5ce3eec6b7 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>
+    
+    
+<div style="position: fixed; bottom: 20px; left: 20px; z-index: 9999; background: white; padding: 10px 12px; border: 1px solid #ccc; border-radius: 8px; box-shadow: 0 1px 4px rgba(0,0,0,0.2); font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; font-size: 13px;">
+  <div style="font-weight: 600; margin-bottom: 6px;">Kyushu Road Trip</div>
+  <div><span style="display:inline-block; width:12px; height:12px; background:#3388ff; border-radius:2px; margin-right:6px;"></span>Overnight stays</div>
+  <div><span style="display:inline-block; width:12px; height:12px; background:#35a853; border-radius:2px; margin-right:6px;"></span>Stops & POIs</div>
+</div>
+<div style="position: fixed; top: 20px; left: 20px; z-index: 10000;">
+  <a href="./kyushu_road_trip_schedule_v2.html" style="text-decoration:none; font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; background:#2563eb; color:#fff; padding:10px 12px; border-radius:10px; border:1px solid #1e40af; box-shadow: 0 1px 4px rgba(0,0,0,0.2);">← Back to Schedule</a>
+</div>
+    
+            <div class="folium-map" id="map_9d3d76d8a5ee1b2dcac7cb5ce3eec6b7" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_9d3d76d8a5ee1b2dcac7cb5ce3eec6b7 = L.map(
+                "map_9d3d76d8a5ee1b2dcac7cb5ce3eec6b7",
+                {
+                    center: [33.0, 131.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 8,
+                    zoomControl: true,
+                    preferCanvas: true,
+                }
+            );
+            L.control.scale().addTo(map_9d3d76d8a5ee1b2dcac7cb5ce3eec6b7);
+
+            
+
+        
+    
+            var tile_layer_6f6e6120a668f11540d9472e46832899 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_9d3d76d8a5ee1b2dcac7cb5ce3eec6b7);
+        
+    
+            var poly_line_8e7c4cf4614488624cf6d1ada96acce0 = L.polyline(
+                [[33.5902, 130.4017], [32.7503, 129.8777], [32.8031, 130.7079], [33.0936, 131.1586], [33.265, 131.3486], [33.8833, 130.875], [33.5902, 130.4017]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.85, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_9d3d76d8a5ee1b2dcac7cb5ce3eec6b7);
+        
+    
+            var marker_f3f986d5928d3668383b73e1389cf534 = L.marker(
+                [33.17025, 130.1397],
+                {}
+            ).addTo(map_9d3d76d8a5ee1b2dcac7cb5ce3eec6b7);
+        
+    
+            var div_icon_bb159b01104e2a6ace835f94afea4b38 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"background: rgba(255,255,255,0.85); border:1px solid #ccc; padding:2px 6px; border-radius:8px; font-size:12px; white-space:nowrap;\"\u003e\u2248 2 hrs (via Arita)\u003c/div\u003e"});
+            marker_f3f986d5928d3668383b73e1389cf534.setIcon(div_icon_bb159b01104e2a6ace835f94afea4b38);
+        
+    
+            var marker_9ce68925cf40b92e27781ae86faface5 = L.marker(
+                [32.776700000000005, 130.2928],
+                {}
+            ).addTo(map_9d3d76d8a5ee1b2dcac7cb5ce3eec6b7);
+        
+    
+            var div_icon_a0fe47a958f35bc9d5853f3995a83b4b = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"background: rgba(255,255,255,0.85); border:1px solid #ccc; padding:2px 6px; border-radius:8px; font-size:12px; white-space:nowrap;\"\u003e\u2248 3 hrs\u003c/div\u003e"});
+            marker_9ce68925cf40b92e27781ae86faface5.setIcon(div_icon_a0fe47a958f35bc9d5853f3995a83b4b);
+        
+    
+            var marker_ff893898b9d321419e8d0d0b7f3a029e = L.marker(
+                [32.948350000000005, 130.93325],
+                {}
+            ).addTo(map_9d3d76d8a5ee1b2dcac7cb5ce3eec6b7);
+        
+    
+            var div_icon_1df814433627b3426d78f3ead770a62d = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"background: rgba(255,255,255,0.85); border:1px solid #ccc; padding:2px 6px; border-radius:8px; font-size:12px; white-space:nowrap;\"\u003e\u2248 2 hrs (via Mt Aso)\u003c/div\u003e"});
+            marker_ff893898b9d321419e8d0d0b7f3a029e.setIcon(div_icon_1df814433627b3426d78f3ead770a62d);
+        
+    
+            var marker_5b0228ce713fb164ab8ecca502b8923a = L.marker(
+                [33.1793, 131.2536],
+                {}
+            ).addTo(map_9d3d76d8a5ee1b2dcac7cb5ce3eec6b7);
+        
+    
+            var div_icon_19a5ebf32fbf88ec0f533faa79c28370 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"background: rgba(255,255,255,0.85); border:1px solid #ccc; padding:2px 6px; border-radius:8px; font-size:12px; white-space:nowrap;\"\u003e\u2248 1 hr (Beppu detour optional)\u003c/div\u003e"});
+            marker_5b0228ce713fb164ab8ecca502b8923a.setIcon(div_icon_19a5ebf32fbf88ec0f533faa79c28370);
+        
+    
+            var marker_1f4e828c1e0653bebd12e6d8c8b4048e = L.marker(
+                [33.57415, 131.11180000000002],
+                {}
+            ).addTo(map_9d3d76d8a5ee1b2dcac7cb5ce3eec6b7);
+        
+    
+            var div_icon_0a2403f3cf740d95bc29ba2ba98c7a4d = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"background: rgba(255,255,255,0.85); border:1px solid #ccc; padding:2px 6px; border-radius:8px; font-size:12px; white-space:nowrap;\"\u003e\u2248 2 hrs\u003c/div\u003e"});
+            marker_1f4e828c1e0653bebd12e6d8c8b4048e.setIcon(div_icon_0a2403f3cf740d95bc29ba2ba98c7a4d);
+        
+    
+            var marker_21d077207d17950b2b60e71c50db1602 = L.marker(
+                [33.73675, 130.63835],
+                {}
+            ).addTo(map_9d3d76d8a5ee1b2dcac7cb5ce3eec6b7);
+        
+    
+            var div_icon_36f29d7d95fa9ff3d213a24d9f3da12a = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"background: rgba(255,255,255,0.85); border:1px solid #ccc; padding:2px 6px; border-radius:8px; font-size:12px; white-space:nowrap;\"\u003e\u2248 1 hr\u003c/div\u003e"});
+            marker_21d077207d17950b2b60e71c50db1602.setIcon(div_icon_36f29d7d95fa9ff3d213a24d9f3da12a);
+        
+    
+            var feature_group_43670c9d4aba9edb8e9d51ecb03e9fcf = L.featureGroup(
+                {}
+            ).addTo(map_9d3d76d8a5ee1b2dcac7cb5ce3eec6b7);
+        
+    
+            var marker_63d807525f650b6b95c8ff44fb723721 = L.marker(
+                [33.5902, 130.4017],
+                {}
+            ).addTo(feature_group_43670c9d4aba9edb8e9d51ecb03e9fcf);
+        
+    
+            var icon_8a111c11146a6b7898d1261ed5083e51 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bed", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_63d807525f650b6b95c8ff44fb723721.setIcon(icon_8a111c11146a6b7898d1261ed5083e51);
+        
+    
+        var popup_c88d387d81e016181773ab446752dc77 = L.popup({"maxWidth": 320});
+
+        
+            var i_frame_1794a05ccab8b8d1b491e73e725f98cd = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxkaXYgc3R5bGU9ImZvbnQtZmFtaWx5OiBzeXN0ZW0tdWksIC1hcHBsZS1zeXN0ZW0sIFNlZ29lIFVJLCBSb2JvdG8sIEhlbHZldGljYSwgQXJpYWw7Ij4KICAgICAgPGg0IHN0eWxlPSJtYXJnaW46MCI+RGF5cyAx4oCTMjogRnVrdW9rYTwvaDQ+CiAgICAgIDxwIHN0eWxlPSJtYXJnaW46NHB4IDA7Ij5OaWdodHM6IDI8YnI+QXJyaXZhbCArIDIgbmlnaHRzPC9wPgogICAgPC9kaXY+CiAgICA=" width="260" style="border:none !important;" height="90"></iframe>`)[0];
+            popup_c88d387d81e016181773ab446752dc77.setContent(i_frame_1794a05ccab8b8d1b491e73e725f98cd);
+        
+
+        marker_63d807525f650b6b95c8ff44fb723721.bindPopup(popup_c88d387d81e016181773ab446752dc77)
+        ;
+
+        
+    
+    
+            marker_63d807525f650b6b95c8ff44fb723721.bindTooltip(
+                `<div>
+                     Days 1–2: Fukuoka
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a1992c519b1413af65975e3235efe5ce = L.marker(
+                [32.7503, 129.8777],
+                {}
+            ).addTo(feature_group_43670c9d4aba9edb8e9d51ecb03e9fcf);
+        
+    
+            var icon_564dc864724ade7e9762f64c5da1447d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bed", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_a1992c519b1413af65975e3235efe5ce.setIcon(icon_564dc864724ade7e9762f64c5da1447d);
+        
+    
+        var popup_552ffffaf35528b31f370321f39b4f9a = L.popup({"maxWidth": 320});
+
+        
+            var i_frame_e9542830e9bb3d87a9f113983860b160 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxkaXYgc3R5bGU9ImZvbnQtZmFtaWx5OiBzeXN0ZW0tdWksIC1hcHBsZS1zeXN0ZW0sIFNlZ29lIFVJLCBSb2JvdG8sIEhlbHZldGljYSwgQXJpYWw7Ij4KICAgICAgPGg0IHN0eWxlPSJtYXJnaW46MCI+RGF5IDM6IE5hZ2FzYWtpPC9oND4KICAgICAgPHAgc3R5bGU9Im1hcmdpbjo0cHggMDsiPk5pZ2h0czogMTxicj5PdmVybmlnaHQ8L3A+CiAgICA8L2Rpdj4KICAgIA==" width="260" style="border:none !important;" height="90"></iframe>`)[0];
+            popup_552ffffaf35528b31f370321f39b4f9a.setContent(i_frame_e9542830e9bb3d87a9f113983860b160);
+        
+
+        marker_a1992c519b1413af65975e3235efe5ce.bindPopup(popup_552ffffaf35528b31f370321f39b4f9a)
+        ;
+
+        
+    
+    
+            marker_a1992c519b1413af65975e3235efe5ce.bindTooltip(
+                `<div>
+                     Day 3: Nagasaki
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_efb5d6970e23ddbc815aafbd2b0b744d = L.marker(
+                [32.8031, 130.7079],
+                {}
+            ).addTo(feature_group_43670c9d4aba9edb8e9d51ecb03e9fcf);
+        
+    
+            var icon_77fe0e7b3e587aaa49cddf56d80ef845 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bed", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_efb5d6970e23ddbc815aafbd2b0b744d.setIcon(icon_77fe0e7b3e587aaa49cddf56d80ef845);
+        
+    
+        var popup_3077910757078fe9b6baa34c8f56da8f = L.popup({"maxWidth": 320});
+
+        
+            var i_frame_5b4c07f09b4698abc55a465577e07f99 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxkaXYgc3R5bGU9ImZvbnQtZmFtaWx5OiBzeXN0ZW0tdWksIC1hcHBsZS1zeXN0ZW0sIFNlZ29lIFVJLCBSb2JvdG8sIEhlbHZldGljYSwgQXJpYWw7Ij4KICAgICAgPGg0IHN0eWxlPSJtYXJnaW46MCI+RGF5IDQ6IEt1bWFtb3RvPC9oND4KICAgICAgPHAgc3R5bGU9Im1hcmdpbjo0cHggMDsiPk5pZ2h0czogMTxicj5PdmVybmlnaHQ8L3A+CiAgICA8L2Rpdj4KICAgIA==" width="260" style="border:none !important;" height="90"></iframe>`)[0];
+            popup_3077910757078fe9b6baa34c8f56da8f.setContent(i_frame_5b4c07f09b4698abc55a465577e07f99);
+        
+
+        marker_efb5d6970e23ddbc815aafbd2b0b744d.bindPopup(popup_3077910757078fe9b6baa34c8f56da8f)
+        ;
+
+        
+    
+    
+            marker_efb5d6970e23ddbc815aafbd2b0b744d.bindTooltip(
+                `<div>
+                     Day 4: Kumamoto
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_43eccaa591325ded6c2391db2ff3b0c1 = L.marker(
+                [33.0936, 131.1586],
+                {}
+            ).addTo(feature_group_43670c9d4aba9edb8e9d51ecb03e9fcf);
+        
+    
+            var icon_5c976318cea682688bd7a7b090645701 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bed", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_43eccaa591325ded6c2391db2ff3b0c1.setIcon(icon_5c976318cea682688bd7a7b090645701);
+        
+    
+        var popup_b55f19193d3e24b1a7326b84e31dc06c = L.popup({"maxWidth": 320});
+
+        
+            var i_frame_00b1abe4d3d690aa787439b73a31e13a = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxkaXYgc3R5bGU9ImZvbnQtZmFtaWx5OiBzeXN0ZW0tdWksIC1hcHBsZS1zeXN0ZW0sIFNlZ29lIFVJLCBSb2JvdG8sIEhlbHZldGljYSwgQXJpYWw7Ij4KICAgICAgPGg0IHN0eWxlPSJtYXJnaW46MCI+RGF5IDU6IEt1cm9rYXdhIE9uc2VuPC9oND4KICAgICAgPHAgc3R5bGU9Im1hcmdpbjo0cHggMDsiPk5pZ2h0czogMTxicj5PdmVybmlnaHQgKyBob3Qgc3ByaW5nczwvcD4KICAgIDwvZGl2PgogICAg" width="260" style="border:none !important;" height="90"></iframe>`)[0];
+            popup_b55f19193d3e24b1a7326b84e31dc06c.setContent(i_frame_00b1abe4d3d690aa787439b73a31e13a);
+        
+
+        marker_43eccaa591325ded6c2391db2ff3b0c1.bindPopup(popup_b55f19193d3e24b1a7326b84e31dc06c)
+        ;
+
+        
+    
+    
+            marker_43eccaa591325ded6c2391db2ff3b0c1.bindTooltip(
+                `<div>
+                     Day 5: Kurokawa Onsen
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d6a32ce580a8a3bfd5dd8bc3ea03e548 = L.marker(
+                [33.265, 131.3486],
+                {}
+            ).addTo(feature_group_43670c9d4aba9edb8e9d51ecb03e9fcf);
+        
+    
+            var icon_5b2e55014a7e74aaa674f4b78a8affa1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bed", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_d6a32ce580a8a3bfd5dd8bc3ea03e548.setIcon(icon_5b2e55014a7e74aaa674f4b78a8affa1);
+        
+    
+        var popup_ff6f55c2008fb2b9d6401b9063d33773 = L.popup({"maxWidth": 320});
+
+        
+            var i_frame_2613047bfa2edfb618b4fd4b01af50d7 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxkaXYgc3R5bGU9ImZvbnQtZmFtaWx5OiBzeXN0ZW0tdWksIC1hcHBsZS1zeXN0ZW0sIFNlZ29lIFVJLCBSb2JvdG8sIEhlbHZldGljYSwgQXJpYWw7Ij4KICAgICAgPGg0IHN0eWxlPSJtYXJnaW46MCI+RGF5IDY6IFl1ZnVpbjwvaDQ+CiAgICAgIDxwIHN0eWxlPSJtYXJnaW46NHB4IDA7Ij5OaWdodHM6IDE8YnI+T3Zlcm5pZ2h0ICsgaG90IHNwcmluZ3M8L3A+CiAgICA8L2Rpdj4KICAgIA==" width="260" style="border:none !important;" height="90"></iframe>`)[0];
+            popup_ff6f55c2008fb2b9d6401b9063d33773.setContent(i_frame_2613047bfa2edfb618b4fd4b01af50d7);
+        
+
+        marker_d6a32ce580a8a3bfd5dd8bc3ea03e548.bindPopup(popup_ff6f55c2008fb2b9d6401b9063d33773)
+        ;
+
+        
+    
+    
+            marker_d6a32ce580a8a3bfd5dd8bc3ea03e548.bindTooltip(
+                `<div>
+                     Day 6: Yufuin
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2d89274805febcb6a0b6ec9c4cfa436b = L.marker(
+                [33.8833, 130.875],
+                {}
+            ).addTo(feature_group_43670c9d4aba9edb8e9d51ecb03e9fcf);
+        
+    
+            var icon_e1dde3e5f66fd2874a45f884570c7da4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bed", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_2d89274805febcb6a0b6ec9c4cfa436b.setIcon(icon_e1dde3e5f66fd2874a45f884570c7da4);
+        
+    
+        var popup_abdfce7b125e94d2d8c9a75d270204f1 = L.popup({"maxWidth": 320});
+
+        
+            var i_frame_1085acbd8cfa8a9ae97f9f665c9db40d = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxkaXYgc3R5bGU9ImZvbnQtZmFtaWx5OiBzeXN0ZW0tdWksIC1hcHBsZS1zeXN0ZW0sIFNlZ29lIFVJLCBSb2JvdG8sIEhlbHZldGljYSwgQXJpYWw7Ij4KICAgICAgPGg0IHN0eWxlPSJtYXJnaW46MCI+RGF5IDc6IEtpdGFreXVzaHU8L2g0PgogICAgICA8cCBzdHlsZT0ibWFyZ2luOjRweCAwOyI+TmlnaHRzOiAxPGJyPk92ZXJuaWdodDwvcD4KICAgIDwvZGl2PgogICAg" width="260" style="border:none !important;" height="90"></iframe>`)[0];
+            popup_abdfce7b125e94d2d8c9a75d270204f1.setContent(i_frame_1085acbd8cfa8a9ae97f9f665c9db40d);
+        
+
+        marker_2d89274805febcb6a0b6ec9c4cfa436b.bindPopup(popup_abdfce7b125e94d2d8c9a75d270204f1)
+        ;
+
+        
+    
+    
+            marker_2d89274805febcb6a0b6ec9c4cfa436b.bindTooltip(
+                `<div>
+                     Day 7: Kitakyushu
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_bf83f82050f64c537fcef189b0c9ba71 = L.marker(
+                [33.5902, 130.4017],
+                {}
+            ).addTo(feature_group_43670c9d4aba9edb8e9d51ecb03e9fcf);
+        
+    
+            var icon_6def16a03312bad2804b2a1e3a6b718f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bed", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_bf83f82050f64c537fcef189b0c9ba71.setIcon(icon_6def16a03312bad2804b2a1e3a6b718f);
+        
+    
+        var popup_666f8d57515584030be1defdfe77667c = L.popup({"maxWidth": 320});
+
+        
+            var i_frame_35213685671ff614e9ab707dc734ec9f = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxkaXYgc3R5bGU9ImZvbnQtZmFtaWx5OiBzeXN0ZW0tdWksIC1hcHBsZS1zeXN0ZW0sIFNlZ29lIFVJLCBSb2JvdG8sIEhlbHZldGljYSwgQXJpYWw7Ij4KICAgICAgPGg0IHN0eWxlPSJtYXJnaW46MCI+RGF5IDg6IEZ1a3Vva2E8L2g0PgogICAgICA8cCBzdHlsZT0ibWFyZ2luOjRweCAwOyI+TmlnaHRzOiAxPGJyPkZpbmFsIG5pZ2h0PC9wPgogICAgPC9kaXY+CiAgICA=" width="260" style="border:none !important;" height="90"></iframe>`)[0];
+            popup_666f8d57515584030be1defdfe77667c.setContent(i_frame_35213685671ff614e9ab707dc734ec9f);
+        
+
+        marker_bf83f82050f64c537fcef189b0c9ba71.bindPopup(popup_666f8d57515584030be1defdfe77667c)
+        ;
+
+        
+    
+    
+            marker_bf83f82050f64c537fcef189b0c9ba71.bindTooltip(
+                `<div>
+                     Day 8: Fukuoka
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var feature_group_c6e40a615cbef7ce6e1e8a6613296cf0 = L.featureGroup(
+                {}
+            ).addTo(map_9d3d76d8a5ee1b2dcac7cb5ce3eec6b7);
+        
+    
+            var marker_2abac92a08b1932f8e9fea65f20c1d0b = L.marker(
+                [33.1794, 129.9819],
+                {}
+            ).addTo(feature_group_c6e40a615cbef7ce6e1e8a6613296cf0);
+        
+    
+            var icon_2b0aba78ed6adebb0460cca81db4a433 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_2abac92a08b1932f8e9fea65f20c1d0b.setIcon(icon_2b0aba78ed6adebb0460cca81db4a433);
+        
+    
+        var popup_fa6b0017f71fe152a0adacf3167fb6f1 = L.popup({"maxWidth": 300});
+
+        
+            var i_frame_f99b91525178ffa2ac0dc32f70a5b26f = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxkaXYgc3R5bGU9ImZvbnQtZmFtaWx5OiBzeXN0ZW0tdWksIC1hcHBsZS1zeXN0ZW0sIFNlZ29lIFVJLCBSb2JvdG8sIEhlbHZldGljYSwgQXJpYWw7Ij4KICAgICAgPHN0cm9uZz5Lb3VyYWt1IEtpbG4gKEFyaXRhKTwvc3Ryb25nPjxicj4KICAgICAgPHNtYWxsPkNlcmFtaWNzIHN0b3AgYmV0d2VlbiBGdWt1b2thIGFuZCBOYWdhc2FraTwvc21hbGw+CiAgICA8L2Rpdj4KICAgIA==" width="260" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_fa6b0017f71fe152a0adacf3167fb6f1.setContent(i_frame_f99b91525178ffa2ac0dc32f70a5b26f);
+        
+
+        marker_2abac92a08b1932f8e9fea65f20c1d0b.bindPopup(popup_fa6b0017f71fe152a0adacf3167fb6f1)
+        ;
+
+        
+    
+    
+            marker_2abac92a08b1932f8e9fea65f20c1d0b.bindTooltip(
+                `<div>
+                     Kouraku Kiln (Arita)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_55878c38ea417b54d697292c083b9903 = L.marker(
+                [32.611, 130.6851],
+                {}
+            ).addTo(feature_group_c6e40a615cbef7ce6e1e8a6613296cf0);
+        
+    
+            var icon_c0d5c7db89afb25df2d01f4549dbac55 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_55878c38ea417b54d697292c083b9903.setIcon(icon_c0d5c7db89afb25df2d01f4549dbac55);
+        
+    
+        var popup_8c44a168284137fae00d51592b415438 = L.popup({"maxWidth": 300});
+
+        
+            var i_frame_0d20183da57bad3666854e9f13d6be13 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxkaXYgc3R5bGU9ImZvbnQtZmFtaWx5OiBzeXN0ZW0tdWksIC1hcHBsZS1zeXN0ZW0sIFNlZ29lIFVJLCBSb2JvdG8sIEhlbHZldGljYSwgQXJpYWw7Ij4KICAgICAgPHN0cm9uZz5LdW1hbW90byBQcmVmZWN0dXJhbCBBbmNpZW50IEJ1cmlhbCBNb3VuZCBNdXNldW08L3N0cm9uZz48YnI+CiAgICAgIDxzbWFsbD5IaXN0b3J5ICYgYXJjaGFlb2xvZ3k8L3NtYWxsPgogICAgPC9kaXY+CiAgICA=" width="260" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_8c44a168284137fae00d51592b415438.setContent(i_frame_0d20183da57bad3666854e9f13d6be13);
+        
+
+        marker_55878c38ea417b54d697292c083b9903.bindPopup(popup_8c44a168284137fae00d51592b415438)
+        ;
+
+        
+    
+    
+            marker_55878c38ea417b54d697292c083b9903.bindTooltip(
+                `<div>
+                     Kumamoto Prefectural Ancient Burial Mound Museum
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a674cff735a9e0aab3fe30c33bf454c3 = L.marker(
+                [32.8842, 131.1049],
+                {}
+            ).addTo(feature_group_c6e40a615cbef7ce6e1e8a6613296cf0);
+        
+    
+            var icon_5c059c860369864de1fd0b88fe6ec907 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_a674cff735a9e0aab3fe30c33bf454c3.setIcon(icon_5c059c860369864de1fd0b88fe6ec907);
+        
+    
+        var popup_81e896739fc5133f47cd2b788fddb786 = L.popup({"maxWidth": 300});
+
+        
+            var i_frame_6fb7bc350d1f471ef2366f984e121ea0 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxkaXYgc3R5bGU9ImZvbnQtZmFtaWx5OiBzeXN0ZW0tdWksIC1hcHBsZS1zeXN0ZW0sIFNlZ29lIFVJLCBSb2JvdG8sIEhlbHZldGljYSwgQXJpYWw7Ij4KICAgICAgPHN0cm9uZz5Nb3VudCBBc288L3N0cm9uZz48YnI+CiAgICAgIDxzbWFsbD5Wb2xjYW5pYyBjYWxkZXJhIHZpZXdzIGJldHdlZW4gS3VtYW1vdG8gYW5kIEt1cm9rYXdhPC9zbWFsbD4KICAgIDwvZGl2PgogICAg" width="260" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_81e896739fc5133f47cd2b788fddb786.setContent(i_frame_6fb7bc350d1f471ef2366f984e121ea0);
+        
+
+        marker_a674cff735a9e0aab3fe30c33bf454c3.bindPopup(popup_81e896739fc5133f47cd2b788fddb786)
+        ;
+
+        
+    
+    
+            marker_a674cff735a9e0aab3fe30c33bf454c3.bindTooltip(
+                `<div>
+                     Mount Aso
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4fa17572b22f35b3c2bd8a2d569f8053 = L.marker(
+                [33.2846, 131.4913],
+                {}
+            ).addTo(feature_group_c6e40a615cbef7ce6e1e8a6613296cf0);
+        
+    
+            var icon_1b9f341f110b8ee4b412c8c09ef98c05 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_4fa17572b22f35b3c2bd8a2d569f8053.setIcon(icon_1b9f341f110b8ee4b412c8c09ef98c05);
+        
+    
+        var popup_ff855f347a1e06fc0ebcc522c0adf4cf = L.popup({"maxWidth": 300});
+
+        
+            var i_frame_4282ce23e218700749fc9a2590b56f15 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxkaXYgc3R5bGU9ImZvbnQtZmFtaWx5OiBzeXN0ZW0tdWksIC1hcHBsZS1zeXN0ZW0sIFNlZ29lIFVJLCBSb2JvdG8sIEhlbHZldGljYSwgQXJpYWw7Ij4KICAgICAgPHN0cm9uZz5CZXBwdTwvc3Ryb25nPjxicj4KICAgICAgPHNtYWxsPk9wdGlvbmFsIGRldG91ciBmb3IgaG90IHNwcmluZ3MgYmV0d2VlbiBLdXJva2F3YS9ZdWZ1aW48L3NtYWxsPgogICAgPC9kaXY+CiAgICA=" width="260" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_ff855f347a1e06fc0ebcc522c0adf4cf.setContent(i_frame_4282ce23e218700749fc9a2590b56f15);
+        
+
+        marker_4fa17572b22f35b3c2bd8a2d569f8053.bindPopup(popup_ff855f347a1e06fc0ebcc522c0adf4cf)
+        ;
+
+        
+    
+    
+            marker_4fa17572b22f35b3c2bd8a2d569f8053.bindTooltip(
+                `<div>
+                     Beppu
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_d1aa16052438e2f5f36751d9fa3c6b4f = L.circleMarker(
+                [33.1794, 129.9819],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.6, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c6e40a615cbef7ce6e1e8a6613296cf0);
+        
+    
+            var circle_marker_4dcfa7f4c0ff8e07bbb4b082ff3ad138 = L.circleMarker(
+                [32.611, 130.6851],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.6, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c6e40a615cbef7ce6e1e8a6613296cf0);
+        
+    
+            var circle_marker_cc1112d306c4ff5f285dfaa9f9af8e9f = L.circleMarker(
+                [32.8842, 131.1049],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.6, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c6e40a615cbef7ce6e1e8a6613296cf0);
+        
+    
+            var circle_marker_09a6027c25122eaaa478db68d38e92d7 = L.circleMarker(
+                [33.2846, 131.4913],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.6, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c6e40a615cbef7ce6e1e8a6613296cf0);
+        
+    
+            var layer_control_d7f9b4d1cc19b8c748ef2468070c9f66 = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_6f6e6120a668f11540d9472e46832899,
+                },
+                overlays :  {
+                    "Overnight stays" : feature_group_43670c9d4aba9edb8e9d51ecb03e9fcf,
+                    "Stops \u0026 POIs" : feature_group_c6e40a615cbef7ce6e1e8a6613296cf0,
+                },
+            };
+            L.control.layers(
+                layer_control_d7f9b4d1cc19b8c748ef2468070c9f66.base_layers,
+                layer_control_d7f9b4d1cc19b8c748ef2468070c9f66.overlays,
+                {"autoZIndex": true, "collapsed": false, "position": "topright"}
+            ).addTo(map_9d3d76d8a5ee1b2dcac7cb5ce3eec6b7);
+        
+</script>
+</html>
