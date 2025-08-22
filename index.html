@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Kyushu Trip — Schedule (Starts Dec 15, 2025)</title>
+<title>Kyushu Trip — Schedule (Dec 14–23, 2025)</title>
 <style>
   :root {
     --bg: #ffffff;
@@ -15,187 +15,178 @@
     --accent: #2563eb;
   }
   * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-    color: var(--text);
-    background: var(--bg);
-    line-height: 1.5;
-  }
-  header {
-    padding: 20px 16px;
-    border-bottom: 1px solid var(--border);
-    position: sticky;
-    top: 0;
-    background: rgba(255,255,255,0.97);
-    backdrop-filter: saturate(180%) blur(8px);
-    z-index: 10;
-  }
+  body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; color: var(--text); background: var(--bg); line-height: 1.55; }
+  header { padding: 20px 16px; border-bottom: 1px solid var(--border); position: sticky; top: 0; background: rgba(255,255,255,0.97); backdrop-filter: saturate(180%) blur(8px); z-index: 10; }
   .wrap { max-width: 860px; margin: 0 auto; }
   .title { margin: 0; font-size: 22px; }
   .subtitle { margin: 4px 0 0; color: var(--muted); font-size: 14px; }
   .actions { display: flex; gap: 10px; margin: 12px 0 0; flex-wrap: wrap; }
-  .btn {
-    padding: 10px 12px; border-radius: 10px; text-decoration: none; border: 1px solid var(--border);
-    color: var(--text); background: var(--muted-bg);
-  }
+  .btn { padding: 10px 12px; border-radius: 10px; text-decoration: none; border: 1px solid var(--border); color: var(--text); background: var(--muted-bg); }
   .btn.primary { background: var(--accent); color: white; border-color: var(--accent); }
   main { padding: 20px 16px; }
-  .tip { background: var(--muted-bg); border: 1px solid var(--border); border-radius: 10px; padding: 10px 12px; color: var(--muted); font-size: 14px; }
   .list { margin-top: 16px; display: grid; gap: 12px; }
-  .day {
-    display: grid; grid-template-columns: 44px 1fr; gap: 12px;
-    border: 1px solid var(--border); border-radius: 12px; padding: 12px; background: #fff;
-  }
-  .index {
-    width: 44px; height: 44px; border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    background: #eef2ff; color: #3730a3; font-weight: 700;
-    border: 1px solid #c7d2fe; margin-top: 2px;
-  }
+  .day { display: grid; grid-template-columns: 44px 1fr; gap: 12px; border: 1px solid var(--border); border-radius: 12px; padding: 12px; background: #fff; }
+  .index { width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: #eef2ff; color: #3730a3; font-weight: 700; border: 1px solid #c7d2fe; margin-top: 2px; }
   .body { min-width: 0; }
   .date { margin: 0; font-size: 14px; color: var(--muted); }
   .title { margin: 2px 0 0; font-size: 18px; }
   .segment { margin: 6px 0; color: var(--muted); }
   .chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0; }
-  .chip {
-    display: inline-block; padding: 6px 8px; border-radius: 999px; background: var(--muted-bg);
-    border: 1px solid var(--border); font-size: 13px;
-  }
-  .chip-overnight { background: #fff7ed; border-color: #fed7aa; }
-  .notes { margin-top: 6px; }
+  .chip { display: inline-block; padding: 6px 8px; border-radius: 999px; background: var(--muted-bg); border: 1px solid var(--border); font-size: 13px; }
+  .chip-overnight a { color: inherit; }
+  .stops { margin: 6px 0 0 0; padding-left: 18px; }
+  .stops li { margin: 2px 0; }
   .map-embed { margin-top: 18px; }
   iframe { width: 100%; height: 460px; border: 1px solid var(--border); border-radius: 12px; }
   footer { color: var(--muted); font-size: 12px; text-align: center; padding: 20px 0 30px; }
-  @media print {
-    header, .actions, .map-embed iframe { display: none !important; }
-    .day { break-inside: avoid; }
-    main { padding-top: 0; }
-  }
+  @media print { header, .actions, .map-embed iframe { display: none !important; } .day { break-inside: avoid; } main { padding-top: 0; } }
 </style>
 </head>
 <body>
   <header>
     <div class="wrap">
       <h1 class="title">Kyushu Road Trip — Schedule</h1>
-      <p class="subtitle">Starts Monday, Dec 15, 2025 · 2 nights in Fukuoka at start · 1 night in Fukuoka at end</p>
+      <p class="subtitle">Dec 14–23, 2025 · Linked hotels & activities</p>
       <div class="actions">
-        <a class="btn primary" href="/japan2025/kyushu_road_trip_map.html" target="_blank" rel="noopener">Open Interactive Map</a>
+        <a class="btn primary" href="./kyushu_road_trip_map.html" target="_blank" rel="noopener">Open Interactive Map</a>
         <a class="btn" href="#" onclick="window.print();return false;">Print</a>
       </div>
     </div>
   </header>
   <main>
     <div class="wrap">
-      <div class="tip">Share these two files together (in the same folder) so the "Back to Schedule" link on the map works offline.</div>
       <section class="list" aria-label="Day-by-day schedule">
         
-    <article class="day">
+    <article class="day" aria-labelledby="d1">
       <div class="index" aria-hidden="true">1</div>
       <div class="body">
-        <h3 class="date">Monday, Dec 15, 2025</h3>
+        <h3 id="d1" class="date">Sunday, Dec 14, 2025</h3>
         <h2 class="title">Arrive in Fukuoka</h2>
-        <div class="segment">Fukuoka (Day 1 in city)</div>
-        <div class="chips"><span class="chip chip-overnight">🛏️ Fukuoka</span></div>
-        <div class="notes">📝 Explore Tenjin, Hakata, yatai food stalls.</div>
-      </div>
-    </article>
-    
-    <article class="day">
-      <div class="index" aria-hidden="true">2</div>
-      <div class="body">
-        <h3 class="date">Tuesday, Dec 16, 2025</h3>
-        <h2 class="title">Fukuoka Day 2</h2>
-        <div class="segment">Fukuoka (Day 2 in city)</div>
-        <div class="chips"><span class="chip chip-overnight">🛏️ Fukuoka</span></div>
-        <div class="notes">📝 Dazaifu Tenmangu, Canal City, ramen hop.</div>
-      </div>
-    </article>
-    
-    <article class="day">
-      <div class="index" aria-hidden="true">3</div>
-      <div class="body">
-        <h3 class="date">Wednesday, Dec 17, 2025</h3>
-        <h2 class="title">Fukuoka → Nagasaki via Arita</h2>
-        <div class="segment">Fukuoka → Nagasaki</div>
-        <div class="chips"><span class="chip">🚗 ≈ 2 hrs (stop at Kouraku Kiln in Arita)</span> <span class="chip chip-overnight">🛏️ Nagasaki</span></div>
-        <div class="notes">📝 Ceramics shopping; reach Nagasaki by afternoon.</div>
-      </div>
-    </article>
-    
-    <article class="day">
-      <div class="index" aria-hidden="true">4</div>
-      <div class="body">
-        <h3 class="date">Thursday, Dec 18, 2025</h3>
-        <h2 class="title">Nagasaki → Kumamoto</h2>
-        <div class="segment">Nagasaki → Kumamoto</div>
-        <div class="chips"><span class="chip">🚗 ≈ 3 hrs</span> <span class="chip chip-overnight">🛏️ Kumamoto</span></div>
-        <div class="notes">📝 Kumamoto Prefectural Ancient Burial Mound Museum.</div>
-      </div>
-    </article>
-    
-    <article class="day">
-      <div class="index" aria-hidden="true">5</div>
-      <div class="body">
-        <h3 class="date">Friday, Dec 19, 2025</h3>
-        <h2 class="title">Kumamoto → Kurokawa via Mt Aso</h2>
-        <div class="segment">Kumamoto → Kurokawa Onsen</div>
-        <div class="chips"><span class="chip">🚗 ≈ 2 hrs</span> <span class="chip chip-overnight">🛏️ Kurokawa Onsen</span></div>
-        <div class="notes">📝 Scenic caldera views at Mount Aso.</div>
-      </div>
-    </article>
-    
-    <article class="day">
-      <div class="index" aria-hidden="true">6</div>
-      <div class="body">
-        <h3 class="date">Saturday, Dec 20, 2025</h3>
-        <h2 class="title">Kurokawa → Yufuin (Beppu detour)</h2>
-        <div class="segment">Kurokawa Onsen → Yufuin</div>
-        <div class="chips"><span class="chip">🚗 ≈ 1 hr</span> <span class="chip chip-overnight">🛏️ Yufuin</span></div>
-        <div class="notes">📝 Optional Beppu hot springs on the way.</div>
-      </div>
-    </article>
-    
-    <article class="day">
-      <div class="index" aria-hidden="true">7</div>
-      <div class="body">
-        <h3 class="date">Sunday, Dec 21, 2025</h3>
-        <h2 class="title">Yufuin → Kitakyushu</h2>
-        <div class="segment">Yufuin → Kitakyushu</div>
-        <div class="chips"><span class="chip">🚗 ≈ 2 hrs</span> <span class="chip chip-overnight">🛏️ Kitakyushu</span></div>
+        <div class="segment">Fukuoka (check-in)</div>
+        <div class="chips"><span class="chip chip-overnight">🛏️ <a href="https://maps.app.goo.gl/ZXX8wN2NuifWvpSq8" target="_blank" rel="noopener">ANA Crowne Plaza Fukuoka (Hakata)</a></span></div>
         
       </div>
     </article>
     
-    <article class="day">
-      <div class="index" aria-hidden="true">8</div>
+    <article class="day" aria-labelledby="d2">
+      <div class="index" aria-hidden="true">2</div>
       <div class="body">
-        <h3 class="date">Monday, Dec 22, 2025</h3>
-        <h2 class="title">Kitakyushu → Fukuoka (Final night)</h2>
-        <div class="segment">Kitakyushu → Fukuoka</div>
-        <div class="chips"><span class="chip">🚗 ≈ 1 hr</span> <span class="chip chip-overnight">🛏️ Fukuoka</span></div>
-        <div class="notes">📝 Last-night dinner in Hakata.</div>
+        <h3 id="d2" class="date">Monday, Dec 15, 2025</h3>
+        <h2 class="title">Fukuoka Day</h2>
+        <div class="segment">Explore Fukuoka</div>
+        <div class="chips"><span class="chip chip-overnight">🛏️ <a href="https://maps.app.goo.gl/ZXX8wN2NuifWvpSq8" target="_blank" rel="noopener">ANA Crowne Plaza Fukuoka (Hakata)</a></span></div>
+       
       </div>
     </article>
     
-    <article class="day">
+    <article class="day" aria-labelledby="d3">
+      <div class="index" aria-hidden="true">3</div>
+      <div class="body">
+        <h3 id="d3" class="date">Tuesday, Dec 16, 2025</h3>
+        <h2 class="title">Fukuoka Day</h2>
+        <div class="segment">Explore Fukuoka</div>
+        <div class="chips"><span class="chip chip-overnight">🛏️ <a href="https://maps.app.goo.gl/ZXX8wN2NuifWvpSq8" target="_blank" rel="noopener">ANA Crowne Plaza Fukuoka (Hakata)</a></span></div>
+        <ul class="stops"></ul></ul>
+
+      </div>
+    </article>
+    
+    <article class="day" aria-labelledby="d4">
+      <div class="index" aria-hidden="true">4</div>
+      <div class="body">
+        <h3 id="d4" class="date">Wednesday, Dec 17, 2025</h3>
+        <h2 class="title">Fukuoka → Nagasaki (via Arita/Imari)</h2>
+        <div class="segment">Drive ≈ 3–4 hrs including stops</div>
+        <div class="chips"><span class="chip chip-overnight">🛏️ <a href="https://maps.app.goo.gl/Ew8dooh1EJ2JZGyR8" target="_blank" rel="noopener">ANA Crowne Plaza Nagasaki Gloverhill</a></span></div>
+        <ul class="stops">
+          <li><a href="https://maps.app.goo.gl/KpHWGLrLN7VrebiD6" target="_blank" rel="noopener">Karatomari Ebisu Oyster Hut (Karatsu)</a></li>
+          <li><a href="https://maps.app.goo.gl/UkaCcxXTPvhar1QA7" target="_blank" rel="noopener">Turban Shell Grill Stalls (Karatsu)</a></li>
+          <li><a href="https://maps.app.goo.gl/tFSLEA6tyC1ScSKVA" target="_blank" rel="noopener">Okawachiyama Village (Imari)</a></li>
+          <li><a href="https://maps.app.goo.gl/wfchczTN2xkABuXM9" target="_blank" rel="noopener">Kouraku Kiln (Arita)</a></li>
+          <li><a href="https://maps.app.goo.gl/3FJpfnrSXRc9sVFb9" target="_blank" rel="noopener">Tanaka Kama Industry</a> (Jon buying a knife)</li>
+        </ul></ul>
+      </div>
+    </article>
+    
+    <article class="day" aria-labelledby="d5">
+      <div class="index" aria-hidden="true">5</div>
+      <div class="body">
+        <h3 id="d5" class="date">Thursday, Dec 18, 2025</h3>
+        <h2 class="title">Nagasaki → Kumamoto</h2>
+        <div class="segment">Drive ≈ 4 hrs including stops</div>
+        <div class="chips"><span class="chip chip-overnight">🛏️ <a href="https://maps.app.goo.gl/HEmDXBB9SvLN7VUTA" target="_blank" rel="noopener">ANA Crowne Plaza Kumamoto New Sky</a></span></div>
+        <ul class="stops"><ul class="stops">
+          <li><a href="https://maps.app.goo.gl/GNzcnCPB1yDfiz1x9" target="_blank" rel="noopener">Unagi no Harada (Fukuoka)</a></li>
+          <li><a href="https://maps.app.goo.gl/THTnczhJPZvAxEPK6" target="_blank" rel="noopener">Kumamoto Prefectural Ancient Burial Mound Museum</a></li></ul>
+      </div>
+    </article>
+    
+    <article class="day" aria-labelledby="d6">
+      <div class="index" aria-hidden="true">6</div>
+      <div class="body">
+        <h3 id="d6" class="date">Friday, Dec 19, 2025</h3>
+        <h2 class="title">Kumamoto → Mt Aso → Kurokawa</h2>
+        <div class="segment">Drive ≈ 2–3 hrs plus sightseeing</div>
+        <div class="chips"><span class="chip chip-overnight">🛏️ <a href="https://maps.app.goo.gl/h1bFHNVUTdpb4jv66">Kurokawa Onsen TBD </a></span></div>
+        <ul class="stops"><li><a href=" " target="_blank" rel="noopener">Mount Aso</a></li>
+          <li><a href="https://maps.app.goo.gl/An3aA6ZYtNhiD12a6" target="_blank" rel="noopener">Kamishikimi Kumanoimasu Shrine</a></li>
+          <li><a href="https://maps.app.goo.gl/fsGiwWqBYr89C5te8" target="_blank" rel="noopener">Takamori Dengaku Hozonkai</a></li></ul>
+      </div>
+    </article>
+    
+    <article class="day" aria-labelledby="d7">
+      <div class="index" aria-hidden="true">7</div>
+      <div class="body">
+        <h3 id="d7" class="date">Saturday, Dec 20, 2025</h3>
+        <h2 class="title">Beppu & Yufuin</h2>
+        <div class="segment">Local sightseeing & onsen</div>
+        <div class="chips"><span class="chip chip-overnight">🛏️ Yufuin/Beppu (TBD)</span></div>
+        <ul class="stops"><li><a href="https://maps.app.goo.gl/xKHh6AFYw2jNkgUJ8" target="_blank" rel="noopener">Hells of Beppu (Jigoku)</a></li>
+          <li><a href="https://maps.app.goo.gl/PYHa3a21seuZGyyS7" target="_blank" rel="noopener">Yufuin</a></li></ul>
+      </div>
+    </article>
+    
+    <article class="day" aria-labelledby="d8">
+      <div class="index" aria-hidden="true">8</div>
+      <div class="body">
+        <h3 id="d8" class="date">Sunday, Dec 21, 2025</h3>
+        <h2 class="title">Kitakyushu → Fukuoka (check-in)</h2>
+        <div class="segment">Drive ≈ 2–3 hrs with stops</div>
+        <div class="chips"><span class="chip chip-overnight">🛏️ <a href="https://maps.app.goo.gl/ZXX8wN2NuifWvpSq8" target="_blank" rel="noopener">ANA Crowne Plaza Fukuoka (Hakata)</a></span></div>
+        <ul class="stops"><li><a href="https://maps.app.goo.gl/xB2jhVkXjecVxcKy8" target="_blank" rel="noopener">Karato Fish Market (Shimonoseki)</a></li>
+          <li><a href="https://maps.app.goo.gl/d9CMWHRxF12NugTa7" target="_blank" rel="noopener">Curry Honpo Mojiko Retro</a></li></ul>
+      </div>
+    </article>
+    
+    <article class="day" aria-labelledby="d9">
       <div class="index" aria-hidden="true">9</div>
       <div class="body">
-        <h3 class="date">Tuesday, Dec 23, 2025</h3>
+        <h3 id="d9" class="date">Monday, Dec 22, 2025</h3>
+        <h2 class="title">Fukuoka Day</h2>
+        <div class="segment">Sightseeing; rental car drop-off 8:00 PM</div>
+        <div class="chips"><span class="chip chip-overnight">🛏️ <a href="https://maps.app.goo.gl/ZXX8wN2NuifWvpSq8" target="_blank" rel="noopener">ANA Crowne Plaza Fukuoka (Hakata)</a></span></div>
+        
+      </div>
+    </article>
+    
+    <article class="day" aria-labelledby="d10">
+      <div class="index" aria-hidden="true">10</div>
+      <div class="body">
+        <h3 id="d10" class="date">Tuesday, Dec 23, 2025</h3>
         <h2 class="title">Depart Fukuoka</h2>
-        <div class="segment">Fukuoka → (Home/Next stop)</div>
+        <div class="segment">Check out & travel day</div>
         <div class="chips"></div>
-        <div class="notes">📝 Return car; travel day.</div>
+        
       </div>
     </article>
     
       </section>
       <section class="map-embed" aria-label="Map preview">
         <h2>Map Preview</h2>
-        <iframe src="kyushu_road_trip_map.html" title="Kyushu Road Trip Map"></iframe>
+        <iframe src="/japan2025/kyushu_road_trip_map.html" title="Kyushu Road Trip Map"></iframe>
       </section>
     </div>
   </main>
-  <footer>© Your trip · Built for easy sharing and printing.</footer>
+  <footer>All location names link to Google Maps for easy navigation.</footer>
 </body>
 </html>
